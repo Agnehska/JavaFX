@@ -5,43 +5,62 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PleaseProvideControllerClassName">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <Label layoutX="35.0" layoutY="50.0" prefHeight="39.0" prefWidth="60.0" text="X =">
-         <font>
-            <Font size="28.0" />
-         </font>
-      </Label>
-      <Label layoutX="35.0" layoutY="99.0" prefHeight="39.0" prefWidth="60.0" text="A =">
-         <font>
-            <Font size="28.0" />
-         </font>
-      </Label>
-      <Label layoutX="35.0" layoutY="150.0" prefHeight="39.0" prefWidth="60.0" text="B =">
-         <font>
-            <Font size="28.0" />
-         </font>
-      </Label>
-      <TextField fx:id="txtX" layoutX="95.0" layoutY="58.0" prefHeight="31.0" prefWidth="224.0" />
-      <TextField fx:id="txtA" layoutX="95.0" layoutY="108.0" prefHeight="31.0" prefWidth="224.0" />
-      <TextField fx:id="txtB" layoutX="95.0" layoutY="155.0" prefHeight="31.0" prefWidth="224.0" />
-      <ImageView fitHeight="161.0" fitWidth="379.0" layoutX="360.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+      <TableView fx:id="Table" layoutX="23.0" layoutY="27.0" prefHeight="359.0" prefWidth="249.0">
+        <columns>
+          <TableColumn fx:id="Col1" prefWidth="75.0" text="K(i)" />
+          <TableColumn fx:id="Col2" prefWidth="75.0" text="Y(i)" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <ImageView fitHeight="150.0" fitWidth="584.0" layoutX="289.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@pic/picture1.png" />
+            <Image url="@pic/formula.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnMake" layoutX="29.0" layoutY="230.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="134.0" text="Решить" />
-      <Button fx:id="btnClean" layoutX="191.0" layoutY="230.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="134.0" text="Очистить" />
-      <Button fx:id="btOut" layoutX="611.0" layoutY="230.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="134.0" text="Выход" />
-      <Label layoutX="35.0" layoutY="331.0" prefHeight="40.0" prefWidth="89.0" text="Ответ:">
+      <Label layoutX="289.0" layoutY="175.0" prefHeight="35.0" prefWidth="59.0" text="a =">
          <font>
-            <Font size="28.0" />
+            <Font size="22.0" />
          </font>
       </Label>
-      <TextField fx:id="txtAnswer" layoutX="136.0" layoutY="336.0" prefHeight="40.0" prefWidth="607.0" />
-      <Label layoutX="356.0" layoutY="230.0" prefHeight="71.0" prefWidth="224.0" style="-fx-border-width: 2; -fx-border-color: black;" text="При x &lt;- 7, А и В не могут одновременно равняться нулю!" textAlignment="CENTER" textFill="#e80b0b" wrapText="true">
+      <Label layoutX="289.0" layoutY="220.0" prefHeight="35.0" prefWidth="59.0" text="b =">
          <font>
-            <Font size="13.0" />
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtA" layoutX="331.0" layoutY="180.0" />
+      <TextField fx:id="txtB" layoutX="331.0" layoutY="225.0" />
+      <Label layoutX="514.0" layoutY="164.0" prefHeight="88.0" prefWidth="364.0" style="-fx-border-color: black;" text="Данный пример имеет решение при условии:.что:    1. K, a, b одновременно не равны нулю                      2. a и b одновременно не равны нулю" wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnFill" layoutX="293.0" layoutY="272.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="279.0" text="Заполнить случайными числами">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnMake" layoutX="293.0" layoutY="335.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="279.0" text="Выполнить задание">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnClean" layoutX="761.0" layoutY="272.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="117.0" text="Очистка">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnOut" layoutX="761.0" layoutY="335.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="117.0" text="Выход">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Label layoutX="581.0" layoutY="272.0" prefHeight="111.0" prefWidth="169.0" text="МОЖНО ВВОДИТЬ ТОЛЬКО ЧИСЛА" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="16.0" />
          </font>
       </Label>
    </children>
