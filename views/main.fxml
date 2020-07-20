@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="624.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.Controller">
+    <children>
+        <!-- Таблица в которую мы будем выводит наш pojo -->
+        <TableView fx:id="tableUsers" layoutX="12.0" layoutY="62.0" prefHeight="200.0" prefWidth="600.0">
+            <columns>
+                <!-- Колонки таблицы -->
+                <TableColumn fx:id="c1Column" prefWidth="100.0" text="c1" />
+                <TableColumn fx:id="c2Column" prefWidth="100.0" text="c2" />
+                <TableColumn fx:id="c3Column" prefWidth="100.0" text="c3" />
+                <TableColumn fx:id="c4Column" prefWidth="100.0" text="c4" />
+                <TableColumn fx:id="c5Column" prefWidth="100.0" text="c5" />
+            </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+        </TableView>
+      <Button fx:id="btnR" layoutX="14.0" layoutY="282.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="201.0" text="Заполнить случайными числами" />
+      <Button fx:id="btnM" layoutX="226.0" layoutY="282.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="131.0" text="Выполнить задание" />
+      <Label layoutX="369.0" layoutY="274.0" prefHeight="30.0" prefWidth="142.0" text="Максимальный элемент" />
+      <Label layoutX="369.0" layoutY="304.0" prefHeight="30.0" prefWidth="142.0" text="Минимальный элемент" />
+      <TextField fx:id="txtmx" layoutX="511.0" layoutY="277.0" prefHeight="25.0" prefWidth="90.0" />
+      <TextField fx:id="txtmn" layoutX="511.0" layoutY="307.0" prefHeight="25.0" prefWidth="90.0" />
+      <Label layoutX="59.0" layoutY="345.0" prefHeight="44.0" prefWidth="486.0" text="Если максимальный элемент в таблице больше минимального  в 10.то все нули заменить единицами . а отрицательные числа заменить на их значени по модулю" textAlignment="CENTER" wrapText="true" />
+    </children>
+</AnchorPane>
